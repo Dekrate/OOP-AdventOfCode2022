@@ -3,7 +3,7 @@ package pl.diakowski.FirstDay;
 import java.util.ArrayList;
 
 public class Elf {
-    private ArrayList<Integer> calories = new ArrayList<>();
+    private final ArrayList<Integer> calories = new ArrayList<>();
 
 
 

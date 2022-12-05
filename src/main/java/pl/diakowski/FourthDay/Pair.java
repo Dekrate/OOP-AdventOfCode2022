@@ -3,12 +3,8 @@ package pl.diakowski.FourthDay;
 import java.util.ArrayList;
 
 public class Pair {
-    private ArrayList<Elf> elves = new ArrayList<>();
+    private final ArrayList<Elf> elves = new ArrayList<>();
 
-
-    public Pair(ArrayList<Elf> elves) {
-        this.elves = elves;
-    }
 
     public Pair() {
     }
@@ -18,16 +14,13 @@ public class Pair {
     }
 
     public boolean ifOneContainAnother() { // although it's easier to make by negating the fact of not containing each other
-        if (elves.get(0).getBegin() < elves.get(1).getBegin() && elves.get(0).getEnd() > elves.get(1).getEnd()) { // 1.1 2.2 2.3 1.4
+        if (elves.get(0).begin() < elves.get(1).begin() && elves.get(0).end() > elves.get(1).end()) { // 1.1 2.2 2.3 1.4
             return true;
-        } else if (elves.get(1).getBegin() < elves.get(0).getBegin() && elves.get(1).getEnd() > elves.get(0).getEnd()) { // 2.1 1.2 1.3 2.4
+        } else if (elves.get(1).begin() < elves.get(0).begin() && elves.get(1).end() > elves.get(0).end()) { // 2.1 1.2 1.3 2.4
             return true;
-        } else if (elves.get(0).getBegin() <= elves.get(1).getBegin() && elves.get(0).getEnd() >= elves.get(1).getEnd()) {
+        } else if (elves.get(0).begin() <= elves.get(1).begin() && elves.get(0).end() >= elves.get(1).end()) {
             return true;
-        } else return elves.get(1).getBegin() <= elves.get(0).getBegin() && elves.get(1).getEnd() >= elves.get(0).getEnd();
+        } else return elves.get(1).begin() <= elves.get(0).begin() && elves.get(1).end() >= elves.get(0).end();
     }
 
-    public boolean complement() {
-        return elves.get(0).getEnd() >= elves.get(1).getBegin() && elves.get(1).getEnd() >= elves.get(0).getBegin();
-    }
 }

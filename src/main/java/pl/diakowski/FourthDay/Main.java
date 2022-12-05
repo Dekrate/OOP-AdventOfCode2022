@@ -1,7 +1,6 @@
 package pl.diakowski.FourthDay;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         File file = new File("src/main/java/pl/diakowski/FourthDay/data.txt");
-        ArrayList<Pair> pairArrayList = new ArrayList<Pair>();
+        ArrayList<Pair> pairArrayList = new ArrayList<>();
         try (Scanner scanner = new Scanner(file)) {
             long size = Files.lines(file.toPath()).count();
             for (long i = 0; i < size; i++) {

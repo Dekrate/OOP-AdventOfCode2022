@@ -1,7 +1,6 @@
 package pl.diakowski.SecondDay;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
@@ -13,7 +12,6 @@ public class Main {
         File file = new File("src/main/java/pl/diakowski/SecondDay/data.txt");
         try (Scanner scanner = new Scanner(file)) {
             long count = Files.lines(file.toPath()).count();
-            ArrayList<Integer> possiblePoints = new ArrayList<>();
             for (long i = 0; i < count + 1; i++) {
                 if (scanner.hasNextLine()) {
                     Round round = new Round();

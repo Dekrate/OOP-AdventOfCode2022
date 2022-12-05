@@ -3,7 +3,7 @@ package pl.diakowski.SecondDay;
 import java.util.ArrayList;
 
 public class Round {
-    private ArrayList<String> round = new ArrayList<>();
+    private final ArrayList<String> round = new ArrayList<>();
 
     public void addParameters(String[] values) {
         round.add(values[0]);
@@ -12,7 +12,7 @@ public class Round {
 
     public int possiblePoints(int points) {
         switch (round.get(0)) {
-            case "A":  // kamień
+            case "A" -> {  // kamień
                 switch (round.get(1)) {
                     case "X" ->  // rock
                             points = points + 1 + 3;
@@ -21,8 +21,8 @@ public class Round {
                     case "Z" ->  // scissors
                             points = points + 3; // + 0
                 }
-                break;
-            case "B":  // papier
+            }
+            case "B" -> {  // papier
                 switch (round.get(1)) {
                     case "X" ->  // rock
                             points += 1;
@@ -31,8 +31,8 @@ public class Round {
                     case "Z" ->  // scissors
                             points = points + 3 + 6;
                 }
-                break;
-            case "C": // nożyce
+            }
+            case "C" -> { // nożyce
                 switch (round.get(1)) {
                     case "X" -> // rock
                             points = points + 6 + 1;
@@ -41,6 +41,7 @@ public class Round {
                     case "Z" -> // scissors
                             points = points + 3 + 3;
                 }
+            }
         }
         return points;
     }
