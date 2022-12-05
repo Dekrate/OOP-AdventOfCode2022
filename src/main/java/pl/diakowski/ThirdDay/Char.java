@@ -1,10 +1,7 @@
 package pl.diakowski.ThirdDay;
 
 public class Char {
-    private char character;
-
-    public Char() {
-    }
+    private final char character;
 
     public Char(char character) {
         this.character = character;
