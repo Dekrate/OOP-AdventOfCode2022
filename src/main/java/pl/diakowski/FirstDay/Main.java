@@ -1,4 +1,4 @@
-package pl.diakowski;
+package pl.diakowski.FirstDay;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,7 +30,7 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(elves.maxValue());
-        System.out.println(elves.sumOfTopThreeElves());
+        System.out.println(elves.maxValue()); // exercise 1
+        System.out.println(elves.sumOfTopThreeElves()); // exercise 2 from adventofcode.com :)
     }
 }

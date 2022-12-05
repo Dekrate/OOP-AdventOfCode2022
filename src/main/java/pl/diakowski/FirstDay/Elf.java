@@ -1,4 +1,4 @@
-package pl.diakowski;
+package pl.diakowski.FirstDay;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,6 @@ public class Elf {
     private ArrayList<Integer> calories = new ArrayList<>();
 
 
-    public Elf() {
-    }
 
     public ArrayList<Integer> calories() {
         return calories;

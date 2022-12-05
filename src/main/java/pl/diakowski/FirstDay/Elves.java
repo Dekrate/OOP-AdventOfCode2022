@@ -1,12 +1,10 @@
-package pl.diakowski;
+package pl.diakowski.FirstDay;
 
 import java.util.*;
 
 public class Elves {
     private ArrayList<Elf> elves = new ArrayList<>();
 
-    public Elves() {
-    }
 
     public void addToList(Elf elf) {
         elves.add(elf);
